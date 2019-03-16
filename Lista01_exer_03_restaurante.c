@@ -54,7 +54,7 @@ main(){
 				break;
 				
 			default:
-				puts("Opção inválida");
+				puts("OpÃ§Ã£o invÃ¡lida");
 				break;
 		}
 		
@@ -63,7 +63,7 @@ main(){
 	system("pause");
 }
 
-// Funções
+// FunÃ§Ãµes
 
 Lista *inserir(Lista *l, Restaurante rest){
 	Lista *novo;
@@ -79,13 +79,13 @@ Restaurante cadastrar(){
 	printf("Nome do restaurante: ");
 	fflush(stdin);
 	gets(rest.nome);
-	printf("Endereço: ");
+	printf("EndereÃ§o: ");
 	fflush(stdin);
 	gets(rest.endereco);
 	printf("Tipo de comida: ");
 	fflush(stdin);
 	gets(rest.comida);
-	printf("Preço: ");
+	printf("PreÃ§o: ");
 	scanf("%f", &rest.preco);
 	return rest;	
 }
@@ -97,9 +97,9 @@ void *exibir(Lista *l){
 	for (p = l; p != NULL; p = p -> prox){
 		puts("--------------------------------------------");
 		printf("Restaurante %s \n", p -> info.nome);
-		printf("Endereço: %s \n", p -> info.endereco);
+		printf("EndereÃ§o: %s \n", p -> info.endereco);
 		printf("Tipo de comida: %s \n", p -> info.comida);
-		printf("Preço: %.2f \n", p -> info.preco);
+		printf("PreÃ§o: %.2f \n", p -> info.preco);
 	}
 	system("pause");
 	system("cls");
@@ -114,7 +114,7 @@ void *pesquisar(Lista *l){
 		puts("Pesquisar por: ");
 		puts("1 - Restaurante");
 		puts("2 - Tipo comida");
-		puts("3 - Preço");
+		puts("3 - PreÃ§o");
 		puts("0 - Sair");
 		scanf("%d", &resp);
 		
@@ -139,7 +139,7 @@ void *pesquisar(Lista *l){
 				break;
 				
 			case 3:
-				puts("------ Lista de Preço -----");
+				puts("------ Lista de PreÃ§o -----");
 				for(p = l; p != NULL; p = p -> prox){
 					printf("%.2f \n", p -> info.preco);
 				}
@@ -148,7 +148,7 @@ void *pesquisar(Lista *l){
 				break;
 								
 			default:
-				puts("Opção inválida");
+				puts("OpÃ§Ã£o invÃ¡lida");
 				break;
 			}	
 		}		
