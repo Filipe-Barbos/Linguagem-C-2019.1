@@ -20,7 +20,7 @@ struct lista{
 };
 typedef struct lista Lista;
 
-// Prototipo das Funções
+// Prototipo das FunÃ§Ãµes
 Lista *inserir(Lista *l, Aluno a);
 Aluno cadastrar();
 void *exibir(Lista *l);
@@ -85,13 +85,13 @@ main(){
 				break;
 				
 			default:
-				puts("Opção Inválida.");
+				puts("OpÃ§Ã£o InvÃ¡lida.");
 			break;
 		}
 	} while(1);
 }
 
-// Implementaçõa das funções
+// ImplementaÃ§Ãµa das funÃ§Ãµes
 
 Lista *inserir(Lista *l, Aluno a){
 	Lista *novo;
@@ -103,12 +103,12 @@ Lista *inserir(Lista *l, Aluno a){
 
 Aluno cadastrar(){
 	Aluno a;
-	printf("Matricula Nº: ");
+	printf("Matricula NÂº: ");
 	scanf("%d", &a.matricula);	
 	printf("Nome: ");
 	fflush(stdin);
 	gets(a.nome);
-	printf("Série 1 2 ou 3: ");
+	printf("SÃ©rie 1 2 ou 3: ");
 	scanf("%d", &a.serie);
 	printf("Turma A B ou C: ");
 	fflush(stdin);
@@ -140,8 +140,8 @@ void *exibir(Lista *l){
 		printf("Nome: %s \n", p -> info.nome);
 		printf("Serie: %d Turma: %s \n", p -> info.serie, p -> info.turma);
 		printf("Sexo: %s \n", p -> info.sexo);
-		printf("Média: %.2f \n", p -> info.media);
-		printf("Situação: %s \n",  p -> info.situacao == 1 ? "APROVADO(A)" : "REPROVADO(A)");
+		printf("MÃ©dia: %.2f \n", p -> info.media);
+		printf("SituaÃ§Ã£o: %s \n",  p -> info.situacao == 1 ? "APROVADO(A)" : "REPROVADO(A)");
 		printf("Ano Nascimento: %d \n", p -> info.ano_nasc);
 		printf("Naturalidade: %s \n", p -> info.naturalidade);
 		puts("");		
