@@ -53,7 +53,7 @@ main(){
 				break;
 				
 			default:
-				puts("Opção inválida");
+				puts("OpÃ§Ã£o invÃ¡lida");
 				break;
 		}
 	} while(1);
@@ -131,7 +131,7 @@ void *pesquisar(Lista *l){
 					break;
 					
 				default:
-					puts("Opção inválida");
+					puts("OpÃ§Ã£o invÃ¡lida");
 					break;
 			}
 		}
