@@ -46,7 +46,7 @@ main(){
 				if(l != NULL){
 					exibir(l);	
 				} else {
-					puts("A lista est· vazia.");
+					puts("A lista est√° vazia.");
 				}				
 				system("pause");
 				system("cls");
@@ -57,7 +57,7 @@ main(){
 				if(l != NULL){
 					l = remover(l);
 				} else {
-					puts("A lista est· vazia.");
+					puts("A lista est√° vazia.");
 				}				
 				system("pause");
 				system("cls");
@@ -68,7 +68,7 @@ main(){
 				break;
 				
 			default:
-				puts("OpÁ„o inv·lida");
+				puts("Op√ß√£o inv√°lida");
 				break;
 		}
 	}while(1);	
@@ -81,7 +81,7 @@ Produto cadastrar(){
 	gets(p.nome);
 	printf("Quantidade: ");
 	scanf("%d", &p.quantidade);
-	printf("PreÁo: ");
+	printf("Pre√ßo: ");
 	scanf("%f", &p.preco);
 	return p;
 }
@@ -105,7 +105,7 @@ void exibir(ListaD *l){
 	do{
 		printf("Produto: %s \n",  p -> info.nome);
 		printf("Quantidade: %d \n", p -> info.quantidade);
-		printf("PreÁo: %.2f \n", p -> info.preco);
+		printf("Pre√ßo: %.2f \n", p -> info.preco);
 		puts("---------------------------------------");
 		p = p -> prox;
 	}while(p != NULL);
@@ -119,18 +119,7 @@ ListaD *remover(ListaD *l){
 	fflush(stdin);
 	gets(nome);
 	p = l; 
-	/*
-	for(p = l; p != NULL; P = P -> prox){
-		comp = strcmp(nome, p -> info.nome);
-		if(comp == 0){
-			resp = 1;
-		}
-	}
-	
-	if(resp == 1){
-		resp = 0;
-	}
-	*/
+
 	if(p -> prox == NULL){
 		resp = 2;
 		comp = strcmp(nome, p -> info.nome);    
@@ -178,7 +167,7 @@ ListaD *remover(ListaD *l){
 			exibir(l);	
 		}		
 	} else if (resp == 2){
-		puts("Item n„o encontrado na lista.");
+		puts("Item n√£o encontrado na lista.");
 	}
 	return l;
 }
